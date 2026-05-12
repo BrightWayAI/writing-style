@@ -23,11 +23,11 @@ Adaptive writing-style plugin for Claude. Learns your voice from real edits over
 
 ## Install
 
-Recommended: via the [BrightWayAI marketplace](https://github.com/BrightWayAI/claude-plugins).
+Recommended: via the [BrightWayAI marketplace](https://github.com/BrightWayAI/nucleus).
 
 ```
-/plugin marketplace add BrightWayAI/claude-plugins
-/plugin install writing-style@claude-plugins
+/plugin marketplace add BrightWayAI/nucleus
+/plugin install writing-style@nucleus
 ```
 
 ## First-time setup
