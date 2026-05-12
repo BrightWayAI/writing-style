@@ -14,9 +14,9 @@ Per-plugin config in this marketplace lives under a user-chosen folder, recorded
 
 ### A — Try the pointer
 
-In Cowork, call `request_cowork_directory(~/Documents)` once if not granted. In Claude Code, filesystem access is direct. Then read `~/Documents/.claude-plugin-config-root`.
+Ensure access to `~/Documents`. In Cowork, call `request_cowork_directory(~/Documents)` once if not already granted. In Claude Code (or any environment with direct filesystem access), no mount is needed. Then read `~/Documents/.claude-plugin-config-root`.
 
-- **Pointer exists**: read line 1 → mount via `request_cowork_directory(<config-root>)` if in Cowork. Skip to section C.
+- **Pointer exists**: read line 1 → that's the config root path. Ensure access to `<config-root>`. If running in Cowork and the folder isn't already mounted in this session, call `request_cowork_directory(<config-root>)`. If running in Claude Code or another environment with direct filesystem access, no mount call is needed. Skip to section C.
 - **Pointer missing**: continue to section B.
 
 ### B — First-time bootstrap
@@ -24,7 +24,7 @@ In Cowork, call `request_cowork_directory(~/Documents)` once if not granted. In 
 Prompt: "First-time plugin setup. Where should I store your plugin config — identity, voice, style files, and per-plugin settings? Pick a folder you control (e.g., `~/Documents/Claude/` or `~/Documents/PluginConfig/`). The folder will hold `identity.md`, `voice.md`, style files, and a `plugins/` subdirectory."
 
 Then:
-1. Mount `<path>` (Cowork: `request_cowork_directory(<path>)`; Claude Code: direct).
+1. Ensure access to `<path>`. If running in Cowork and the folder isn't already mounted in this session, call `request_cowork_directory(<path>)`. If running in Claude Code or another environment with direct filesystem access, no mount call is needed.
 2. Create `<path>/plugins/` if it doesn't exist.
 3. Write the absolute path to `~/Documents/.claude-plugin-config-root`.
 4. Confirm.

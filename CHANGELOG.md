@@ -4,6 +4,14 @@ All notable changes to writing-style are documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/). Versions match `plugin.json`.
 
+## [0.1.1] — Platform-agnostic Step 0 (2026-05-12)
+
+### Changed
+- **`/setup-style` Step 0 and `/style` directory-access language now fully platform-agnostic.** Every `request_cowork_directory(...)` call is conditional: "In Cowork, call `request_cowork_directory(...)`. In Claude Code (or any environment with direct filesystem access), no mount is needed." Same plugin source works in both runtimes.
+
+### Why this matters
+Phase 0 of SECOND-BRAIN-V2-SPEC. Removes the implicit Cowork-only assumption so Claude Code users do not hit unsupported tool calls during setup or drafting.
+
 ## [0.1.0] — Initial release
 
 ### Added

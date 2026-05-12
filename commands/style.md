@@ -16,7 +16,7 @@ Draft-first writing in your voice.
 
 ## Step 0 — Resolve config root and read style files
 
-In Cowork: `request_cowork_directory(~/Documents)` if not granted. Read `~/Documents/.claude-plugin-config-root` for the config root path.
+Ensure access to `~/Documents`. In Cowork, call `request_cowork_directory(~/Documents)` once if not already granted. In Claude Code (or any environment with direct filesystem access), no mount is needed. Then read `~/Documents/.claude-plugin-config-root` for the config root path.
 
 Then read:
 - `<config-root>/identity.md` — for name, title, company (signature material)
