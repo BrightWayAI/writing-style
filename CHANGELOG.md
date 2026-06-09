@@ -4,6 +4,11 @@ All notable changes to writing-style are documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/). Versions match `plugin.json`.
 
+## [0.1.2] — Broader auto-trigger (2026-06-08)
+
+### Changed
+- `skills/writing-style/SKILL.md` — widened the auto-trigger so the skill fires on far more natural phrasings without an explicit `/style` call. The `description` now covers create / respond / revise verbs (write, draft, compose, reply, respond, reword, rewrite, polish, tighten, "make this sound like me", etc.), short and one-line messages, and cases where the user doesn't say "in my voice" or name the medium. Added a **"default to firing"** rule in the body plus explicit edge-cases (paste-and-say-"reply", unstated medium) and non-triggers (code, internal memory notes, raw data). Addresses real-use feedback that the skill had to be invoked explicitly too often.
+
 ## [0.1.1] — Platform-agnostic Step 0 (2026-05-12)
 
 ### Changed
